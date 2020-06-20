@@ -58,7 +58,7 @@
       <div class="card-body">
         <ul>
         {% for contact in sponsor.contacts %}
-          <li>{{ contact.name }} &lt;<a href="mailto:{{ contact.email }}">{{ contact.email }}</a>&gt;</li>
+          <li>{{ contact.name|safe }} &lt;<a href="mailto:{{ contact.email }}">{{ contact.email }}</a>&gt;</li>
         {% endfor %}
         </ul>
       </div>
@@ -80,7 +80,7 @@
         <h5>{{ day }}</h5>
         <ul>
             {% for (time_string, label) in zooms %}
-                <li> <span class="zoom_times">{{ time_string }}</span> {{     label }} </li>
+                <li> <span class="zoom_times">{{ time_string }}</span> {{     label|safe }} </li>
             {% endfor %}
         </ul>
         {% endfor %}
@@ -102,7 +102,7 @@
       <div class="card-body">
         <ul>
         {% for resource in sponsor.resources %}
-            <li><a href="{{ resource.website }}" target="_blank">{{ resource.label }}</a></li>
+            <li><a href="{{ resource.website }}" target="_blank">{{ resource.label|safe }}</a></li>
         {% endfor %}
         </ul>
       </div>
