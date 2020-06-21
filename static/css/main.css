@@ -182,6 +182,7 @@ h3.card-subtitle.text-muted {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+  margin-left: -4px;
 }
 
 .sponsorImg {
